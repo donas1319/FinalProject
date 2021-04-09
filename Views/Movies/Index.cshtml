@@ -61,13 +61,14 @@
                 <td>
                     @if (User.IsInRole("Administrator"))
                     {
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit | </a>
                     }
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a>
                     @if (User.IsInRole("Administrator"))
                     {
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id">| Delete</a>
                     }
+                    <a asp-action="AddToCart2" asp-controller="Shop" asp-route-id="@item.Id" class="btn btn-primary">Buy</a>
                 </td>
             </tr>
         }

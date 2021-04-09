@@ -23,6 +23,7 @@ namespace MovieTicketReservation.Models
         public int CategoryId { get; set; } //FK
         [Display(Name = "Category")]
         public Category category { get; set; }
-
+        public List<OrderDetail> OrderDetails { get; set; }
+        public List<Cart> Carts { get; set; }
     }
 }
